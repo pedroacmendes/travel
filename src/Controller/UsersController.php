@@ -24,12 +24,12 @@ class UsersController extends AppController
     *
     * @return \Cake\Http\Response|null|void Renders view
     */
-    public function index()
-    {
-        $users = $this->paginate($this->Users);
-
-        $this->set(compact('users'));
-    }
+    // public function index()
+    // {
+    //     $users = $this->paginate($this->Users);
+    //
+    //     $this->set(compact('users'));
+    // }
 
     /**
     * View method
@@ -55,7 +55,7 @@ class UsersController extends AppController
     public function add()
     {
         $this->viewBuilder()->setLayout('welcome');
-        
+
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
