@@ -20,11 +20,12 @@ class TripsController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Users'],
-        ];
-        $trips = $this->paginate($this->Trips);
-
+        // $this->paginate = [
+        //     'contain' => ['Users'],
+        // ];
+        // $trips = $this->paginate($this->Trips);
+        $trips = 1;
+        //
         $this->set(compact('trips'));
     }
 
