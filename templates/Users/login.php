@@ -3,14 +3,11 @@
         <div class="row">
             <div class="col-sm-6 text-black">
 
-                <div class="px-5 ms-xl-4">
-                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
-                    <span class="h1 fw-bold mb-0">Travel</span>
-                </div>
-
                 <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
                     <?= $this->Form->create() ?>
-                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+
+                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Travel</h3>
+                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Bem-Vindo de volta!</h3>
 
                     <div class="form-outline mb-4">
                         <?= $this->Form->control('email', ['class' => 'form-control form-control-lg']) ?>
@@ -23,8 +20,8 @@
                         <?= $this->Form->button(__('Login'), ['class' => 'btn btn-info btn-lg btn-block']); ?>
                     </div>
 
-                    <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                    <p>Don't have an account? <a href="/users/add" class="link-info">Register here</a></p>
+                    <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Já não sabes a tua password?</a></p>
+                    <p>Não tens uma conta? <a href="/users/add" class="link-info">Regista-te aqui</a></p>
 
                     <?= $this->Form->end() ?>
 
