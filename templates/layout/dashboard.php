@@ -18,9 +18,8 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <?= $this->Html->css(['home']) ?>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -28,74 +27,60 @@
 </head>
 <body>
 
-    <!-- navbar -->
-    <div class="navbar navbar-inverse">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <div class="navbar-header">
-                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                        <a href="#" class="navbar-brand">Travel</a>
-                    </div>
-
-                    <div class="navbar-collapse collapse" id="mobile_menu">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="/dashboard/trips">Home</a></li>
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Viagens <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Nova Viagem</a></li>
-                                    <li><a href="#">Viagens Futuras</a></li>
-                                    <li><a href="#">Viagens Anteriores</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Descobrir</a></li>
-                            <li><a href="#">Favoritos</a></li>
+            <a class="navbar-brand" href="#">Travel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/dashboard/trips">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Viagens
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="/dashboard/trips/add">Nova Viagem</a></li>
+                            <li><a class="dropdown-item" href="#">Viagens Futuras</a></li>
+                            <li><a class="dropdown-item" href="#">Viagens Anteriores</a></li>
                         </ul>
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <form action="" class="navbar-form">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input type="search" name="search" id="" placeholder="Pesquisa aqui..." class="form-control">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                        </div>
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Descobrir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Favoritos</a>
+                    </li>
+                </ul>
 
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Perfil <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/users/edit/2">Perfil</a></li>
-                                    <li><a href="mailto:pedroacmendes@hotmail.com">Contacte-nos</a></li>
-                                    <li><a href="/users/logout">Log out</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <span class="navbar-text">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/users/edit/2">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/users/logout">Log out</a>
+                        </li>
+                    </ul>
+                </span>
+
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="container">
-        <?= $this->fetch('content') ?>
-    </div>
-
-    <footer class="bg-light py-5">
-    </footer>
+    <?= $this->fetch('content') ?>
 
     <?= $this->fetch('script') ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-    <script src="/js/scripts.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <?= $this->Flash->render() ?>
 </body>
