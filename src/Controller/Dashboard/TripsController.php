@@ -13,6 +13,13 @@ use App\Controller\AppController;
  */
 class TripsController extends AppController
 {
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+
+        $this->viewBuilder()->setLayout('dashboard');
+
+    }
     /**
      * Index method
      *
