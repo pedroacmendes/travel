@@ -80,7 +80,9 @@
         </div>
     </div>
 
-    <?= $this->fetch('content') ?>
+    <div class="container">
+        <?= $this->fetch('content') ?>
+    </div>
 
     <footer class="bg-light py-5">
     </footer>

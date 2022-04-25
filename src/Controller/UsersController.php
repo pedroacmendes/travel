@@ -78,6 +78,8 @@ class UsersController extends AppController
     */
     public function edit($id = null)
     {
+        $this->viewBuilder()->setLayout('dashboard');
+
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
@@ -86,7 +88,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect($this->here);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }

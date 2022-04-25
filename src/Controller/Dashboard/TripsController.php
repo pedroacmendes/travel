@@ -31,9 +31,8 @@ class TripsController extends AppController
         //     'contain' => ['Users'],
         // ];
         // $trips = $this->paginate($this->Trips);
-        $trips = 1;
-        //
-        $this->set(compact('trips'));
+
+        // $this->set(compact('trips'));
     }
 
     /**

@@ -52,6 +52,7 @@ return static function (RouteBuilder $routes) {
          */
         $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
         $builder->connect('/dashboard/trips', ['controller' => 'Trips', 'action' => 'index', 'prefix' => 'dashboard']);
+        $builder->connect('/dashboard/trips/add', ['controller' => 'Trips', 'action' => 'add', 'prefix' => 'dashboard']);
 
 
         /*
